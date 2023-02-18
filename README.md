@@ -9,3 +9,6 @@
 - numpy installation
 	- activate venv
 	- pip install numpy
+
+- to time execution
+	- time python iterative.py
