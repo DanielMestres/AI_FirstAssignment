@@ -1,4 +1,4 @@
-# Hello
+# Iterative and Numpy implementation of product of matrices
 
 - venv creation
 	- mkdir venv

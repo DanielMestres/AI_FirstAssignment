@@ -1,4 +1,5 @@
 from array import *
+import numpy as np
 
 # Arrays should be m*n and n*k to be product compatible
 def iterative_Product(a1, a2):
@@ -23,10 +24,14 @@ def iterative_Product(a1, a2):
 
     print(result)
 
+def numpy_Product(a1, a2):
+    print("Hello!")
+
 
 # Declare 1d and 2d arrays
 test_array_1 = [[1, 2, 3, 4]]
 test_array_2 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+test_array_3 = [[1], [2], [3], [4]]
 
-iterative_Product(test_array_1, test_array_2)
+iterative_Product(test_array_1, test_array_3)
 
