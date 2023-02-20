@@ -1,6 +1,5 @@
+import time
 import numpy as np
-
-# Code provided by chatgpt. Funciona bien.
 
 # Define two 2D arrays
 A = np.array([[1, 2], [3, 4]])
@@ -11,8 +10,6 @@ start_time = time.time()
 
 # Multiply the two arrays using dot product
 C = np.dot(A, B)
-# Alternatively, you can use the @ operator
-# C = A @ B
 
 end_time = time.time()
 

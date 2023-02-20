@@ -1,3 +1,4 @@
+import time
 from array import *
 
 # Arrays should be m*n and n*k to be product compatible
@@ -29,5 +30,11 @@ test_array_1 = [[1, 2, 3, 4]]
 test_array_2 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
 test_array_3 = [[1], [2], [3], [4]]
 
+# Needed for time measurement
+start_time = time.time()
+
 iterative_Product(test_array_1, test_array_3)
 
+end_time = time.time()
+
+print("Execution time: ", end_time - start_time, " seconds")
