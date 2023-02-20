@@ -1,40 +1,31 @@
 import time
 from array import *
 
-# Arrays should be m*n and n*k to be product compatible
-def iterative_Product(a1, a2):
-    r_a1 = len(a1)
-    c_a1 = len(a1[0])
-    r_a2 = len(a2)
-    c_a2 = len(a2[0])
+# Declare 1d and 2d arrays
+test_array_1 = [[1, 2, 3, 4]]
+test_array_2 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
 
-    # Check for compatibility
-    if(c_a1 != r_a2):
-        print("Arrays not product compatible!")
-        return
+r_a1 = len(test_array_1)
+c_a1 = len(test_array_1[0])
+r_a2 = len(test_array_2)
+c_a2 = len(test_array_2[0])
 
+# Check for compatibility
+if(c_a1 != r_a2):
+    print("Arrays not product compatible!")
+else:
     # Declare product array with correct dimensions
     result = [[0 for x in range(c_a2)] for y in range(r_a1)]
+
+    start_time = time.time()
 
     # Calculate product
     for i in range(r_a1):
         for j in range(c_a2):
             for k in range(c_a1):
-                result[i][j] += a1[i][k] * a2[k][j]
+                result[i][j] += test_array_1[i][k] * test_array_2[k][j]
+
+    end_time = time.time()
 
     print(result)
-
-
-# Declare 1d and 2d arrays
-test_array_1 = [[1, 2, 3, 4]]
-test_array_2 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
-test_array_3 = [[1], [2], [3], [4]]
-
-# Needed for time measurement
-start_time = time.time()
-
-iterative_Product(test_array_1, test_array_3)
-
-end_time = time.time()
-
-print("Execution time: ", end_time - start_time, " seconds")
+    print("Execution time: ", end_time - start_time, " seconds")
